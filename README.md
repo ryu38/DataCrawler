@@ -1,0 +1,4 @@
+# DataCrawler
+icrawlerを用いた画像収集を実行する環境
+
+vscodeのremote containerを用いたDocker環境上でicrawlerを実行
