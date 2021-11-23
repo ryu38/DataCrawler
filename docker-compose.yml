@@ -1,0 +1,10 @@
+version: '3'
+
+services: 
+  python:
+    image: python:3.8-slim-buster
+    volumes: 
+      - ./requirements.txt:/requirements.txt
+      - ./entrypoint.sh:/entrypoint.sh
+    container_name: crawler-python
+    tty: true

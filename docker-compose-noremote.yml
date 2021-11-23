@@ -1,0 +1,16 @@
+version: '3'
+
+services: 
+  python:
+    image: python:3.8-slim-buster
+    volumes: 
+      - ./requirements.txt:/requirements.txt
+      - ./workspace:/workspace
+    command: >
+      bash -c '
+        pip install -r /requirements.txt &&
+        /bin/bash
+      '
+    working_dir: /workspace
+    container_name: crawler-python
+    tty: true
